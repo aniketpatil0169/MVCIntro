@@ -1,0 +1,68 @@
+﻿<h3>All Categories</h3>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Is Available</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Shirts</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Home Appliances</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Grocery</td>
+        <td>Yes</td>
+    </tr>
+</table>
+
+<hr />
+
+@{
+    int i = 10, j = 20;
+    int c = i + j;
+    <p>@i + @j = @c</p>
+ }
+@{ 
+    List<string> categories = new List<string>() { "Men", "Women", "Kids" };
+
+    <ul>
+        @foreach (string s in categories)
+        {
+            <li>@s</li>
+        }
+    </ul>
+}
+<hr />
+<table>
+    <tr>
+        <td>Html Textbocx</td>
+        <td>
+            <input type="text" id="txtHtml" name="tctHtml"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Html Helper Class Textbox</td>
+        <td>
+            @Html.TextBox("txtMVC")
+        </td>
+        <td>
+            @Html.Password("txtPassword")
+        </td>
+        <td>
+            @Html.TextArea("txtAddress")
+        </td>
+        <td>
+            @Html.RadioButton("Gender", "Male") Male
+            @Html.RadioButton("Gender", "Female") Female
+            @Html.RadioButton("Gender", "Transgender") Transgender
+        </td>
+    </tr>
+</table>
